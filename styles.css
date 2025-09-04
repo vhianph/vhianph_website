@@ -1,0 +1,113 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: lightcoral;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    text-align: center;
+}
+
+/* INTRO PAGE STYLES */
+.introPage h1 {
+    color: lightgoldenrodyellow;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.introPage table {
+    font-weight: bold;
+    color: lightgoldenrodyellow;
+    border: 10px solid lightgoldenrodyellow;
+    padding: 10px;
+    border-radius: 15px;
+    display: inline-block;
+    background-color: transparent;
+}
+.introPage input {
+    color: lightgoldenrodyellow;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: lightcoral;
+}
+.introPage button {
+    background-color: lightgoldenrodyellow;
+    color: lightcoral;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.introPage button:hover {
+    background-color: lightskyblue;
+}
+
+/* FIRST PAGE STYLES */
+.firstPage {
+    font-weight: bold;
+    color: lightgoldenrodyellow;
+    border: 10px solid lightgoldenrodyellow;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.firstPage button {
+    background-color: lightgoldenrodyellow;
+    color: lightcoral;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.firstPage button:hover {
+    background-color: lightskyblue;
+}
+
+/* SECOND PAGE STYLES */
+.secondPage {
+    font-weight: bold;
+    color: lightgoldenrodyellow;
+    border: 10px solid lightgoldenrodyellow;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.secondPage table {
+    font-weight: bold;
+    color: lightgoldenrodyellow;
+    padding: 10px;
+    border-radius: 15px;
+    display: inline-block;
+    background-color: transparent;
+}
+.secondPage button {
+    font-size: 20px;
+    background-color: lightgoldenrodyellow;
+    color: lightcoral;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.secondPage button:hover {
+    background-color: lightskyblue;
+}
+.secondPage p {
+    color: lightgoldenrodyellow;
+    font-size: 1.2em;
+    margin: center;
+}
+.secondPage img {
+    margin: auto;
+    max-width: 200px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
