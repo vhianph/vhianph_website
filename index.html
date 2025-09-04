@@ -53,9 +53,34 @@
                     <img id="showGif" style="display:none; max-width:200px; margin-top:10px;">
                 </td>
             </tr>
+            <tr>
+                <td>
+                    <button onclick="showThirdPage()">Next</button>
+                </td>
+            </tr>
         </table>
     </div>
     <script src="second_page.js"></script>
 
+
+    <!-- THIRD PAGE -->
+    <div class="thirdPage" style="display: none;">
+        <h2>About us✍️✍️</h2>
+        <h3>Just two dreamers sharing our journey 🚀</h3>
+        <div class="thirdPage_container">
+        <!-- Sidebar -->
+            <div class="thirdPage_sidebar">
+                <button onclick="showCategory(1)">Early year</button>
+                <button onclick="showCategory(2)">Second year</button>
+                <button onclick="showCategory(3)">Third year</button>
+                <button onclick="showCategory(4)">Fourth year</button>
+            </div>
+        <!-- Main -->
+        <div class="thirdPage_main" id="mainPanel">
+        <!-- JS sẽ render ảnh vào đây -->
+        </div>
+    </div>
+    </div>
+    <script src="third_page.js"></script>
 </body>
 </html>
