@@ -1,86 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My website</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Website</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- INTRO PAGE -->
-    <div class="introPage">
-        <h1>Welcome to my website :3</h1>
-        <table>
-            <tr>
-                <td>Please enter your name:</td>
-                <td><input type="text" id="nameInput"></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><button type="submit" onclick="submitName()">Submit</button></td>
-            </tr>
-        </table>
-    </div>
+  <!-- Nút mở feedback -->
+  <button id="openFeedbackBtn">💌 Feedback</button>
 
-    <!-- FIRST PAGE -->
-    <div class="firstPage" style="display:none;">
-        <h1>Hello <span id="userName"></span>! 🎉</h1>
-        <p>This is my page about me and my destiny.
-            <br>Hope you will like it :3
-        </p>
-        <img src="image_and_gif/Drawing Doodle GIF.gif" alt="Drawing Doodle GIF" style="max-width:100%; height:auto;">
-        <table>
-            <tr></tr>
-            <tr>
-                <td><button onclick="logout()">Logout</button></td>
-                <td><button onclick="showSecondPage()">Next page</button></td>
-            </tr>
-        </table>
+  <!-- Modal feedback -->
+  <div id="feedbackModal" class="modal">
+    <div class="modal-content">
+      <span id="closeFeedbackBtn">&times;</span>
+      <h2>Đóng góp ý kiến ✍️</h2>
+      <select id="choiceSelect">
+        <option value="Bom">Quang Bờm</option>
+        <option value="Bong">Thị Bông</option>
+        <option value="Both">Cả hai</option>
+      </select>
+      <br><br>
+      <textarea id="feedbackInput" rows="3" placeholder="Viết lời chúc hoặc ý kiến của bạn..."></textarea>
+      <br>
+      <button id="submitFeedback">Gửi</button>
+      <div id="feedbackList"></div>
     </div>
-    <script src="first_page.js"></script>
+  </div>
 
-    <!-- SECOND PAGE -->
-    <div class="secondPage" style="display:none;">
-        <h1>Who are you related to? 🤔🤔🤔</h1>
-        <table>
-            <tr>
-                <td>
-                    <button id="Bom" onclick="showResult('You selected Quang Bờm!')">Quang Bờm</button>
-                    <button id="Bong" onclick="showResult('You selected Thị Bông!')">Thị Bông</button>
-                    <button id="Both" onclick="showResult('You selected Both!')">Both nha</button>
-                    <p id="showMessage"></p>
-                    <img id="showGif" style="display:none; max-width:200px; margin-top:10px;">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <button onclick="showThirdPage()">Next</button>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <script src="second_page.js"></script>
+  <!-- INTRO PAGE -->
+  <div class="introPage">
+    <h1>Welcome to our wedding website 💕</h1>
+    <table>
+      <tr>
+        <td>Please enter your name:</td>
+        <td><input type="text" id="nameInput"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><button type="submit" onclick="submitName()">Submit</button></td>
+      </tr>
+    </table>
+  </div>
 
+  <!-- FIRST PAGE -->
+  <div class="firstPage" style="display:none;">
+    <h1>Hello <span id="userName"></span>! 🎉</h1>
+    <p>Welcome to our journey. Let's share some memories ✨</p>
+    <img src="image_and_gif/Drawing Doodle GIF.gif" alt="GIF" style="max-width:100%; height:auto;">
+    <table>
+      <tr>
+        <td><button onclick="logout()">Logout</button></td>
+        <td><button onclick="showSecondPage()">Next page</button></td>
+      </tr>
+    </table>
+  </div>
+  <script src="first_page.js"></script>
 
-    <!-- THIRD PAGE -->
-    <div class="thirdPage" style="display: none;">
-        <h2>About us✍️✍️</h2>
-        <h3>Just two dreamers sharing our journey 🚀</h3>
-        <div class="thirdPage_container">
-        <!-- Sidebar -->
-            <div class="thirdPage_sidebar">
-                <button onclick="showCategory(1)">Early year</button>
-                <button onclick="showCategory(2)">Second year</button>
-                <button onclick="showCategory(3)">Third year</button>
-                <button onclick="showCategory(4)">Fourth year</button>
-            </div>
-        <!-- Main -->
-        <div class="thirdPage_main" id="mainPanel">
-        <!-- JS sẽ render ảnh vào đây -->
-        </div>
+  <!-- SECOND PAGE -->
+  <div class="secondPage" style="display:none;">
+    <h1>Who are you related to? 🤔</h1>
+    <table>
+      <tr>
+        <td>
+          <button onclick="showResult('You selected Quang Bờm!', 'Bom')">Quang Bờm</button>
+          <button onclick="showResult('You selected Thị Bông!', 'Bong')">Thị Bông</button>
+          <button onclick="showResult('You selected Both!', 'Both')">Both nha</button>
+          <p id="showMessage"></p>
+          <img id="showGif" style="display:none; max-width:200px; margin-top:10px;">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button onclick="showThirdPage()">Next</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <script src="second_page.js"></script>
+
+  <!-- THIRD PAGE -->
+  <div class="thirdPage" style="display:none;">
+    <h2>About us ✍️</h2>
+    <h3>Just two dreamers sharing our journey 🚀</h3>
+    <div class="thirdPage_container">
+      <!-- Sidebar -->
+      <div class="thirdPage_sidebar">
+        <button onclick="showCategory(1)">Early year</button>
+        <button onclick="showCategory(2)">Second year</button>
+        <button onclick="showCategory(3)">Third year</button>
+        <button onclick="showCategory(4)">Fourth year</button>
+      </div>
+      <!-- Main -->
+      <div class="thirdPage_main" id="mainPanel">
+        <p>👉 Click một mục bên trái để xem câu chuyện 💕</p>
+      </div>
     </div>
-    </div>
-    <script src="third_page.js"></script>
+  </div>
+  <script src="third_page.js"></script>
+
+  <!-- JS API Google Sheets -->
+  <script src="feedback.js"></script>
 </body>
 </html>
